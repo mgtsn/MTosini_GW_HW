@@ -1,17 +1,24 @@
--- Use the following starter code to begin creating a conceptual ERD --
-
 Trainers
 -
--- Input attributes here --
+trainer_id INT PK
+gym_id INT FK - Gym.gym_id
+
 
 Members
 -
--- Input attributes here --
+member_id INT PK
+gym_id INT FK - Gym.gym_id
+trainer_id INT FK Trainers.trainer_id
+card_number INT FK - Payments.card_number
+
 
 Gym
 -
--- Input attributes here --
+gym_id INT PK
+location VARCHAR
 
 Payments
 -
--- Input attributes here --
+card_number INT PK
+member_id FK - Members.member_id
+

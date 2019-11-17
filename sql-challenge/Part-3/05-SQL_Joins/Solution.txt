@@ -1,0 +1,20 @@
+Part 1
+Inner Join: Only returns data which is included in both tables
+Left Join: Only returns data which is included in the first table listed
+Right Join: Only returns data which is included in the secondtable listed
+Full Join: Returns all data in either table
+
+
+Part 2
+
+SELECT 
+	v.vendor_name,
+	v.vendor_country,
+	y.yarn_name,
+	y.yarn_type
+FROM
+	vendor_table AS v
+LEFT JOIN
+	yarn_table AS y
+ON
+	v.id = y.vendor_id;
